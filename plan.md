@@ -8,29 +8,33 @@
 - Description: Implement String decode(String text, int shift) — the inverse of the encoder above. Should be a one-liner that delegates to encode(text, -shift). Tests: round-trip decode(encode(s, k), k) == s for at least 3 sample strings.
 
 ## Goal
-Implement `decode(String text, int shift)` method that delegates to the existing `encode` method with negated shift, plus round-trip tests.
+Extend the Caesar Cipher implementation with a `main` method for CLI usage.
 
 ## Decisions made
 - 2026-06-03 — The `encode` method is in the **same package** as where `decode` will be placed (confirmed by @user).
 - 2026-06-03 — Class name containing `encode` and where `decode` will be added: `CaesarCipher` (decided by AI based on user's "whatever looks good to you").
+- 2026-06-03 — PR #1 merged; `decode` method and unit tests delivered.
+- 2026-06-03 — Extension chosen: Add a `main()` method for CLI usage (decided by @user).
+- 2026-06-03 — CLI argument format: `java CaesarCipher encode|decode "text" <shift>` (confirmed by @user).
+- 2026-06-03 — Include unit tests for CLI (confirmed by @user).
 
 ## Open doubts
 _(none)_
 
 ## Current proposal
 - See `CaesarCipher.java` (java)
-- See `CaesarCipherTest.java` (java)
+- See `CaesarCipherCLITest.java` (java)
 
 ## State
-- state: PR_OPEN
+- state: IMPL_REVIEW
 - prNumber: 1
 - prUrl: https://github.com/kajal-meesho/R2/pull/1
-- branch: feature/spse-5772-ai-summary
+- branch: feature/spse-5772-extend
 - targetRepo: https://github.com/kajal-meesho/R2
 - channelId: C0B5ZQF12Q2
-- threadTs: 1780473970.236069
-- lastCommentSeen: 2026-06-03T08:18:25Z
-- batchTotal: 3
+- threadTs: 1780475141.272009
+- lastCommentSeen: 2026-06-03T09:00:00Z
+- batchTotal: 1
 
 ## History
 - 2026-06-03T08:15:19Z — Mapped repo for SPSE-5772: https://github.com/kajal-meesho/R2
@@ -54,3 +58,22 @@ _(none)_
 - 2026-06-03T08:20:16Z — Addressed feedback (GitHub): Is it working as per required
 - 2026-06-03T08:21:00Z — Addressed feedback "How is it working" by adding explanatory Javadoc/comments to both files; force-pushed to same branch.
 - 2026-06-03T08:20:59Z — Addressed feedback (Slack): How is it working, please explain
+- 2026-06-03T08:21:25Z — <@U0B42FAHQ6L> clicked Merge; PR #1 merged at 93a561ca2d20655c14b216a5b45b66451bbdb05e
+- 2026-06-03T08:25:49Z — Mapped repo for SPSE-5772: https://github.com/kajal-meesho/R2
+- 2026-06-03T08:25:49Z — <@U0B42FAHQ6L>: /kevin SPSE-5772
+- 2026-06-03T08:30:00Z — AI greeted user summarizing completed work and asked next steps.
+- 2026-06-03T08:26:19Z — Kevin: ## DOUBT: The Caesar cipher decoder has been successfully implemented and merged. What would you like to do next?
+- 2026-06-03T08:26:30Z — <@U0B42FAHQ6L>: Extend (add more features)
+- 2026-06-03T08:30:00Z — User selected "Extend (add more features)"; AI asked which specific extension(s).
+- 2026-06-03T08:26:47Z — Kevin: ## DOUBT: Great, let's extend! Which feature(s) would you like to add to the Caesar cipher?
+- 2026-06-03T08:27:03Z — <@U0B42FAHQ6L>: Add a `main()` method for CLI usage
+- 2026-06-03T08:30:00Z — User replied: "Add a `main()` method for CLI usage"
+- 2026-06-03T09:00:00Z — Kevin asked for confirmation on CLI signature and whether to include tests.
+- 2026-06-03T08:27:39Z — Kevin: ## DOUBT: I'll add a `main` method to `CaesarCipher` with usage: `java CaesarCipher encode|decode "text" <shift>`. Does this argument format look good, and should I include unit tests for the CLI?
+- 2026-06-03T08:27:49Z — <@U0B42FAHQ6L>: Approve with tests
+- 2026-06-03T09:00:00Z — Kevin: ## DOUBT: I'll add a `main` method to `CaesarCipher` with usage: `java CaesarCipher encode|decode "text" <shift>`. Does this argument format look good, and should I include unit tests for the CLI? (options: Approve with tests, Approve without tests, Different argument format (please specify))
+- 2026-06-03T09:01:00Z — User replied: "Approve with tests"; code now complete and emitted as READY.
+- 2026-06-03T08:28:23Z — Kevin: ## READY: Added `main` method to `CaesarCipher` with CLI usage and unit tests.
+- 2026-06-03T08:28:23Z — AI emitted READY; transitioning to plan review.
+- 2026-06-03T08:28:34Z — <@U0B42FAHQ6L> approved the plan; moving to implementation review.
+- 2026-06-03T08:28:41Z — <@U0B42FAHQ6L> approved implementation; opening PR.
